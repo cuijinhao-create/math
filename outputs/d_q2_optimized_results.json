@@ -1,0 +1,1472 @@
+{
+  "summary": {
+    "sorties": 22,
+    "total_energy_kwh": 66.6148377424167,
+    "makespan_s": 7722.821416430629,
+    "hard_violations": [],
+    "soft_tardy_boxes": 0,
+    "weighted_tardiness_priority_seconds": 0.0
+  },
+  "baseline": {
+    "sorties": 22,
+    "total_energy_kwh": 65.53337348031911,
+    "makespan_s": 8729.51474067264,
+    "hard_violations": [],
+    "soft_tardy_boxes": 0,
+    "weighted_tardiness_priority_seconds": 0.0
+  },
+  "optimization_history": [
+    [
+      0,
+      "baseline routes rescheduled",
+      [
+        7968.421354935344,
+        65.53337348031911,
+        22,
+        2966911.606208284
+      ]
+    ],
+    [
+      1,
+      "move",
+      [
+        7854.82141643063,
+        66.70922543214435,
+        22,
+        2898482.5569893233
+      ]
+    ],
+    [
+      2,
+      "move",
+      [
+        7788.82141643063,
+        66.93022555968713,
+        22,
+        2953069.4291215357
+      ]
+    ],
+    [
+      3,
+      "move",
+      [
+        7722.82141643063,
+        67.90308063138987,
+        22,
+        2904461.7297702143
+      ]
+    ],
+    [
+      4,
+      "model A->B",
+      [
+        7722.82141643063,
+        67.33741116462205,
+        22,
+        3067056.28275934
+      ]
+    ],
+    [
+      5,
+      "move",
+      [
+        7722.82141643063,
+        66.6148377424167,
+        22,
+        3146696.3772775265
+      ]
+    ]
+  ],
+  "trips": [
+    {
+      "model": "A",
+      "stops": [
+        {
+          "service": "S010",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S010-MED-01",
+        "S010-WAT-01"
+      ],
+      "mass": 17.0,
+      "volume": 0.039,
+      "energy": 1.9524999797660398,
+      "load_start": 0.0,
+      "return_time": 1653.853569215472,
+      "deliveries": {
+        "S010-MED-01": 1104.4634512744026,
+        "S010-WAT-01": 1104.4634512744026
+      },
+      "return_soc": 0.5661111156075467,
+      "drone": "U01",
+      "battery": "A-BAT-01",
+      "battery_ready_after_charge": 2717.9091189256615,
+      "id": "OPT-01"
+    },
+    {
+      "model": "A",
+      "stops": [
+        {
+          "service": "S006",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S006-MED-01",
+        "S006-WAT-01"
+      ],
+      "mass": 17.0,
+      "volume": 0.039,
+      "energy": 1.3109309317025148,
+      "load_start": 0.0,
+      "return_time": 1316.0149467210344,
+      "deliveries": {
+        "S006-MED-01": 936.7708066938505,
+        "S006-WAT-01": 936.7708066938505
+      },
+      "return_soc": 0.7086820151772188,
+      "drone": "U02",
+      "battery": "A-BAT-02",
+      "battery_ready_after_charge": 2194.7283269906497,
+      "id": "OPT-02"
+    },
+    {
+      "model": "A",
+      "stops": [
+        {
+          "service": "S003",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S003-MED-01",
+        "S003-WAT-01"
+      ],
+      "mass": 17.0,
+      "volume": 0.039,
+      "energy": 2.981108283731041,
+      "load_start": 0.0,
+      "return_time": 2262.2786643967265,
+      "deliveries": {
+        "S003-MED-01": 1409.1126655316966,
+        "S003-WAT-01": 1409.1126655316966
+      },
+      "return_soc": 0.3375314925042131,
+      "drone": "U03",
+      "battery": "A-BAT-03",
+      "battery_ready_after_charge": 3623.4877241412496,
+      "id": "OPT-03"
+    },
+    {
+      "model": "A",
+      "stops": [
+        {
+          "service": "S006",
+          "boxes": [
+            "S006-WAT-02"
+          ]
+        },
+        {
+          "service": "S007",
+          "boxes": [
+            "S007-FOD-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S006-WAT-02",
+        "S007-FOD-01"
+      ],
+      "mass": 22.0,
+      "volume": 0.055,
+      "energy": 2.176903488607261,
+      "load_start": 0.0,
+      "return_time": 2061.9161196128202,
+      "deliveries": {
+        "S006-WAT-02": 906.7708066938505,
+        "S007-FOD-01": 1483.33477988795
+      },
+      "return_soc": 0.5162436691983865,
+      "drone": "U04",
+      "battery": "A-BAT-04",
+      "battery_ready_after_charge": 3190.799349654918,
+      "id": "OPT-04"
+    },
+    {
+      "model": "B",
+      "stops": [
+        {
+          "service": "S012",
+          "boxes": [
+            "S012-FOD-01",
+            "S012-MED-01",
+            "S012-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S012-FOD-01",
+        "S012-MED-01",
+        "S012-WAT-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.7632799914213146,
+      "load_start": 0.0,
+      "return_time": 1944.0258065766109,
+      "deliveries": {
+        "S012-FOD-01": 1281.9429032883054,
+        "S012-MED-01": 1281.9429032883054,
+        "S012-WAT-01": 1281.9429032883054
+      },
+      "return_soc": 0.30918000214467134,
+      "drone": "U05",
+      "battery": "B-BAT-01",
+      "battery_ready_after_charge": 3808.1138028591804,
+      "id": "OPT-05"
+    },
+    {
+      "model": "B",
+      "stops": [
+        {
+          "service": "S007",
+          "boxes": [
+            "S007-HYG-01",
+            "S007-WAT-02"
+          ]
+        }
+      ],
+      "boxes": [
+        "S007-HYG-01",
+        "S007-WAT-02"
+      ],
+      "mass": 20.0,
+      "volume": 0.062,
+      "energy": 1.6504734786068538,
+      "load_start": 0.0,
+      "return_time": 1561.3150828501568,
+      "deliveries": {
+        "S007-HYG-01": 1058.2975414250784,
+        "S007-WAT-02": 1058.2975414250784
+      },
+      "return_soc": 0.5873816303482866,
+      "drone": "U06",
+      "battery": "B-BAT-02",
+      "battery_ready_after_charge": 2943.1869235797935,
+      "id": "OPT-06"
+    },
+    {
+      "model": "C",
+      "stops": [
+        {
+          "service": "S001",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-06"
+          ]
+        }
+      ],
+      "boxes": [
+        "S001-MED-01",
+        "S001-MED-02",
+        "S001-WAT-01",
+        "S001-WAT-02",
+        "S001-WAT-03",
+        "S001-WAT-04",
+        "S001-WAT-06"
+      ],
+      "mass": 76.0,
+      "volume": 0.159,
+      "energy": 2.926237390911867,
+      "load_start": 0.0,
+      "return_time": 1561.4267416985454,
+      "deliveries": {
+        "S001-MED-01": 1248.8983708492726,
+        "S001-MED-02": 1248.8983708492726,
+        "S001-WAT-01": 1248.8983708492726,
+        "S001-WAT-02": 1248.8983708492726,
+        "S001-WAT-03": 1248.8983708492726,
+        "S001-WAT-04": 1248.8983708492726,
+        "S001-WAT-06": 1248.8983708492726
+      },
+      "return_soc": 0.6342203261360166,
+      "drone": "U07",
+      "battery": "C-BAT-01",
+      "battery_ready_after_charge": 3187.2827017371756,
+      "id": "OPT-07"
+    },
+    {
+      "model": "C",
+      "stops": [
+        {
+          "service": "S006",
+          "boxes": [
+            "S006-FOD-01",
+            "S006-HYG-01",
+            "S006-WAT-03"
+          ]
+        }
+      ],
+      "boxes": [
+        "S006-FOD-01",
+        "S006-HYG-01",
+        "S006-WAT-03"
+      ],
+      "mass": 28.0,
+      "volume": 0.09,
+      "energy": 2.1837223144765527,
+      "load_start": 0.0,
+      "return_time": 1367.0356687212286,
+      "deliveries": {
+        "S006-FOD-01": 1013.1628343606143,
+        "S006-HYG-01": 1013.1628343606143,
+        "S006-WAT-03": 1013.1628343606143
+      },
+      "return_soc": 0.7270347106904309,
+      "drone": "U08",
+      "battery": "C-BAT-02",
+      "battery_ready_after_charge": 2791.7937955586285,
+      "id": "OPT-08"
+    },
+    {
+      "model": "A",
+      "stops": [
+        {
+          "service": "S013",
+          "boxes": [
+            "S013-FOD-01"
+          ]
+        },
+        {
+          "service": "S010",
+          "boxes": [
+            "S010-FOD-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S013-FOD-01",
+        "S010-FOD-01"
+      ],
+      "mass": 16.0,
+      "volume": 0.056,
+      "energy": 2.244273787780923,
+      "load_start": 1316.0149467210344,
+      "return_time": 3321.2930740882357,
+      "deliveries": {
+        "S013-FOD-01": 2364.845206153629,
+        "S010-FOD-01": 2771.902956147166
+      },
+      "return_soc": 0.5012724916042394,
+      "drone": "U02",
+      "battery": "A-BAT-05",
+      "battery_ready_after_charge": 4469.638835002725,
+      "id": "OPT-09"
+    },
+    {
+      "model": "C",
+      "stops": [
+        {
+          "service": "S002",
+          "boxes": [
+            "S002-FOD-01",
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-WAT-04"
+          ]
+        }
+      ],
+      "boxes": [
+        "S002-FOD-01",
+        "S002-WAT-01",
+        "S002-WAT-02",
+        "S002-WAT-03",
+        "S002-WAT-04"
+      ],
+      "mass": 64.0,
+      "volume": 0.136,
+      "energy": 6.126733981529402,
+      "load_start": 1367.0356687212286,
+      "return_time": 3416.1186793370034,
+      "deliveries": {
+        "S002-FOD-01": 2791.987174029116,
+        "S002-WAT-01": 2791.987174029116,
+        "S002-WAT-02": 2791.987174029116,
+        "S002-WAT-03": 2791.987174029116,
+        "S002-WAT-04": 2791.987174029116
+      },
+      "return_soc": 0.2341582523088247,
+      "drone": "U08",
+      "battery": "C-BAT-03",
+      "battery_ready_after_charge": 5908.775799334549,
+      "id": "OPT-10"
+    },
+    {
+      "model": "B",
+      "stops": [
+        {
+          "service": "S013",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01"
+          ]
+        },
+        {
+          "service": "S002",
+          "boxes": [
+            "S002-MED-01"
+          ]
+        },
+        {
+          "service": "S005",
+          "boxes": [
+            "S005-MED-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S013-MED-01",
+        "S013-WAT-01",
+        "S002-MED-01",
+        "S005-MED-01"
+      ],
+      "mass": 23.0,
+      "volume": 0.063,
+      "energy": 3.085217538128699,
+      "load_start": 1561.3150828501568,
+      "return_time": 4209.503379360834,
+      "deliveries": {
+        "S013-MED-01": 2619.33355895092,
+        "S013-WAT-01": 2619.33355895092,
+        "S002-MED-01": 3174.683240232142,
+        "S005-MED-01": 3732.747385591439
+      },
+      "return_soc": 0.22869561546782524,
+      "drone": "U06",
+      "battery": "B-BAT-03",
+      "battery_ready_after_charge": 6213.097645883269,
+      "id": "OPT-11"
+    },
+    {
+      "model": "C",
+      "stops": [
+        {
+          "service": "S001",
+          "boxes": [
+            "S001-FOD-01",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02",
+            "S001-WAT-05",
+            "S001-WAT-07",
+            "S001-WAT-08"
+          ]
+        }
+      ],
+      "boxes": [
+        "S001-FOD-01",
+        "S001-FOD-02",
+        "S001-FOD-03",
+        "S001-HYG-01",
+        "S001-HYG-02",
+        "S001-WAT-05",
+        "S001-WAT-07",
+        "S001-WAT-08"
+      ],
+      "mass": 78.0,
+      "volume": 0.23500000000000001,
+      "energy": 3.004662059347571,
+      "load_start": 1561.4267416985454,
+      "return_time": 3188.8534833970907,
+      "deliveries": {
+        "S001-FOD-01": 2876.325112547818,
+        "S001-FOD-02": 2876.325112547818,
+        "S001-FOD-03": 2876.325112547818,
+        "S001-HYG-01": 2876.325112547818,
+        "S001-HYG-02": 2876.325112547818,
+        "S001-WAT-05": 2876.325112547818,
+        "S001-WAT-07": 2876.325112547818,
+        "S001-WAT-08": 2876.325112547818
+      },
+      "return_soc": 0.6244172425815536,
+      "drone": "U07",
+      "battery": "C-BAT-04",
+      "battery_ready_after_charge": 4835.949457803725,
+      "id": "OPT-12"
+    },
+    {
+      "model": "A",
+      "stops": [
+        {
+          "service": "S007",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S007-MED-01",
+        "S007-WAT-01"
+      ],
+      "mass": 17.0,
+      "volume": 0.039,
+      "energy": 1.8990181164236093,
+      "load_start": 1653.853569215472,
+      "return_time": 3366.2962486652123,
+      "deliveries": {
+        "S007-MED-01": 2787.714908940342,
+        "S007-WAT-01": 2787.714908940342
+      },
+      "return_soc": 0.5779959741280869,
+      "drone": "U01",
+      "battery": "A-BAT-06",
+      "battery_ready_after_charge": 4414.901482298699,
+      "id": "OPT-13"
+    },
+    {
+      "model": "B",
+      "stops": [
+        {
+          "service": "S014",
+          "boxes": [
+            "S014-FOD-01",
+            "S014-MED-01",
+            "S014-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S014-FOD-01",
+        "S014-MED-01",
+        "S014-WAT-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.1276131486007412,
+      "load_start": 1944.0258065766109,
+      "return_time": 3788.565693247737,
+      "deliveries": {
+        "S014-FOD-01": 3173.852416578841,
+        "S014-MED-01": 3173.852416578841,
+        "S014-WAT-01": 3173.852416578841
+      },
+      "return_soc": 0.4680967128498147,
+      "drone": "U05",
+      "battery": "B-BAT-04",
+      "battery_ready_after_charge": 5377.198057641392,
+      "id": "OPT-14"
+    },
+    {
+      "model": "C",
+      "stops": [
+        {
+          "service": "S004",
+          "boxes": [
+            "S004-FOD-01",
+            "S004-HYG-01",
+            "S004-MED-01",
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-WAT-03"
+          ]
+        }
+      ],
+      "boxes": [
+        "S004-FOD-01",
+        "S004-HYG-01",
+        "S004-MED-01",
+        "S004-WAT-01",
+        "S004-WAT-02",
+        "S004-WAT-03"
+      ],
+      "mass": 59.0,
+      "volume": 0.156,
+      "energy": 6.176858606791639,
+      "load_start": 3188.8534833970907,
+      "return_time": 5494.038974864913,
+      "deliveries": {
+        "S004-FOD-01": 4774.416229131002,
+        "S004-HYG-01": 4774.416229131002,
+        "S004-MED-01": 4774.416229131002,
+        "S004-WAT-01": 4774.416229131002,
+        "S004-WAT-02": 4774.416229131002,
+        "S004-WAT-03": 4774.416229131002
+      },
+      "return_soc": 0.22789267415104508,
+      "drone": "U07",
+      "battery": "C-BAT-02",
+      "battery_ready_after_charge": 8000.271514204314,
+      "id": "OPT-15"
+    },
+    {
+      "model": "C",
+      "stops": [
+        {
+          "service": "S003",
+          "boxes": [
+            "S003-FOD-01",
+            "S003-FOD-02",
+            "S003-HYG-01",
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-WAT-04"
+          ]
+        }
+      ],
+      "boxes": [
+        "S003-FOD-01",
+        "S003-FOD-02",
+        "S003-HYG-01",
+        "S003-WAT-02",
+        "S003-WAT-03",
+        "S003-WAT-04"
+      ],
+      "mass": 64.0,
+      "volume": 0.17200000000000001,
+      "energy": 6.147682456745563,
+      "load_start": 3416.1186793370034,
+      "return_time": 5851.929537449436,
+      "deliveries": {
+        "S003-FOD-01": 5061.48410839322,
+        "S003-FOD-02": 5061.48410839322,
+        "S003-HYG-01": 5061.48410839322,
+        "S003-WAT-02": 5061.48410839322,
+        "S003-WAT-03": 5061.48410839322,
+        "S003-WAT-04": 5061.48410839322
+      },
+      "return_soc": 0.23153969290680465,
+      "drone": "U08",
+      "battery": "C-BAT-01",
+      "battery_ready_after_charge": 8350.260202818026,
+      "id": "OPT-16"
+    },
+    {
+      "model": "B",
+      "stops": [
+        {
+          "service": "S009",
+          "boxes": [
+            "S009-FOD-01",
+            "S009-MED-01",
+            "S009-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S009-FOD-01",
+        "S009-MED-01",
+        "S009-WAT-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.1024310782372955,
+      "load_start": 3788.565693247737,
+      "return_time": 5349.3454837948475,
+      "deliveries": {
+        "S009-FOD-01": 4880.545588521292,
+        "S009-MED-01": 4880.545588521292,
+        "S009-WAT-01": 4880.545588521292
+      },
+      "return_soc": 0.47439223044067613,
+      "drone": "U05",
+      "battery": "B-BAT-02",
+      "battery_ready_after_charge": 6927.065617697675,
+      "id": "OPT-17"
+    },
+    {
+      "model": "B",
+      "stops": [
+        {
+          "service": "S015",
+          "boxes": [
+            "S015-FOD-01",
+            "S015-MED-01",
+            "S015-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S015-FOD-01",
+        "S015-MED-01",
+        "S015-WAT-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 2.310845731625163,
+      "load_start": 4209.503379360833,
+      "return_time": 6039.07748037685,
+      "deliveries": {
+        "S015-FOD-01": 5427.730429868841,
+        "S015-MED-01": 5427.730429868841,
+        "S015-WAT-01": 5427.730429868841
+      },
+      "return_soc": 0.4222885670937092,
+      "drone": "U06",
+      "battery": "B-BAT-01",
+      "battery_ready_after_charge": 7707.110630747753,
+      "id": "OPT-18"
+    },
+    {
+      "model": "B",
+      "stops": [
+        {
+          "service": "S002",
+          "boxes": [
+            "S002-FOD-02",
+            "S002-HYG-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S002-FOD-02",
+        "S002-HYG-01"
+      ],
+      "mass": 14.0,
+      "volume": 0.063,
+      "energy": 2.369859570267468,
+      "load_start": 5377.198057641392,
+      "return_time": 7140.408375386073,
+      "deliveries": {
+        "S002-FOD-02": 6540.7432165137325,
+        "S002-HYG-01": 6540.7432165137325
+      },
+      "return_soc": 0.40753510743313304,
+      "drone": "U05",
+      "battery": "B-BAT-04",
+      "battery_ready_after_charge": 8834.014189168642,
+      "id": "OPT-19"
+    },
+    {
+      "model": "C",
+      "stops": [
+        {
+          "service": "S008",
+          "boxes": [
+            "S008-FOD-01",
+            "S008-HYG-01",
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-WAT-02"
+          ]
+        }
+      ],
+      "boxes": [
+        "S008-FOD-01",
+        "S008-HYG-01",
+        "S008-MED-01",
+        "S008-WAT-01",
+        "S008-WAT-02"
+      ],
+      "mass": 45.0,
+      "volume": 0.129,
+      "energy": 5.853710552573132,
+      "load_start": 5494.038974864912,
+      "return_time": 7688.168029323437,
+      "deliveries": {
+        "S008-FOD-01": 6988.943502094175,
+        "S008-HYG-01": 6988.943502094175,
+        "S008-MED-01": 6988.943502094175,
+        "S008-WAT-01": 6988.943502094175,
+        "S008-WAT-02": 6988.943502094175
+      },
+      "return_soc": 0.26828618092835854,
+      "drone": "U07",
+      "battery": "C-BAT-04",
+      "battery_ready_after_charge": 10106.88130397866,
+      "id": "OPT-20"
+    },
+    {
+      "model": "C",
+      "stops": [
+        {
+          "service": "S005",
+          "boxes": [
+            "S005-FOD-01",
+            "S005-HYG-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03"
+          ]
+        }
+      ],
+      "boxes": [
+        "S005-FOD-01",
+        "S005-HYG-01",
+        "S005-WAT-01",
+        "S005-WAT-02",
+        "S005-WAT-03"
+      ],
+      "mass": 56.0,
+      "volume": 0.14400000000000002,
+      "energy": 4.143629116952082,
+      "load_start": 5908.775799334549,
+      "return_time": 7722.821416430629,
+      "deliveries": {
+        "S005-FOD-01": 7217.433607882589,
+        "S005-HYG-01": 7217.433607882589,
+        "S005-WAT-01": 7217.433607882589,
+        "S005-WAT-02": 7217.433607882589,
+        "S005-WAT-03": 7217.433607882589
+      },
+      "return_soc": 0.4820463603809898,
+      "drone": "U08",
+      "battery": "C-BAT-03",
+      "battery_ready_after_charge": 9678.387635605151,
+      "id": "OPT-21"
+    },
+    {
+      "model": "B",
+      "stops": [
+        {
+          "service": "S011",
+          "boxes": [
+            "S011-FOD-01",
+            "S011-MED-01",
+            "S011-WAT-01"
+          ]
+        }
+      ],
+      "boxes": [
+        "S011-FOD-01",
+        "S011-MED-01",
+        "S011-WAT-01"
+      ],
+      "mass": 25.0,
+      "volume": 0.067,
+      "energy": 1.0771461381899656,
+      "load_start": 6213.097645883269,
+      "return_time": 7402.72845044775,
+      "deliveries": {
+        "S011-FOD-01": 7120.099714832177,
+        "S011-MED-01": 7120.099714832177,
+        "S011-WAT-01": 7120.099714832177
+      },
+      "return_soc": 0.7307134654525086,
+      "drone": "U06",
+      "battery": "B-BAT-03",
+      "battery_ready_after_charge": 8536.158443663402,
+      "id": "OPT-22"
+    }
+  ],
+  "deliveries": {
+    "S010-MED-01": {
+      "trip": "OPT-01",
+      "service": "S010",
+      "time": 1104.4634512744026,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S010-WAT-01": {
+      "trip": "OPT-01",
+      "service": "S010",
+      "time": 1104.4634512744026,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S006-MED-01": {
+      "trip": "OPT-02",
+      "service": "S006",
+      "time": 936.7708066938505,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S006-WAT-01": {
+      "trip": "OPT-02",
+      "service": "S006",
+      "time": 936.7708066938505,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S003-MED-01": {
+      "trip": "OPT-03",
+      "service": "S003",
+      "time": 1409.1126655316966,
+      "expected": 7200.0,
+      "hard_deadline": 7200.0
+    },
+    "S003-WAT-01": {
+      "trip": "OPT-03",
+      "service": "S003",
+      "time": 1409.1126655316966,
+      "expected": 7200.0,
+      "hard_deadline": 7200.0
+    },
+    "S006-WAT-02": {
+      "trip": "OPT-04",
+      "service": "S006",
+      "time": 906.7708066938505,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S007-FOD-01": {
+      "trip": "OPT-04",
+      "service": "S007",
+      "time": 1483.33477988795,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S012-FOD-01": {
+      "trip": "OPT-05",
+      "service": "S012",
+      "time": 1281.9429032883054,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S012-MED-01": {
+      "trip": "OPT-05",
+      "service": "S012",
+      "time": 1281.9429032883054,
+      "expected": 7200.0,
+      "hard_deadline": 3600.0
+    },
+    "S012-WAT-01": {
+      "trip": "OPT-05",
+      "service": "S012",
+      "time": 1281.9429032883054,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S007-HYG-01": {
+      "trip": "OPT-06",
+      "service": "S007",
+      "time": 1058.2975414250784,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S007-WAT-02": {
+      "trip": "OPT-06",
+      "service": "S007",
+      "time": 1058.2975414250784,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S001-MED-01": {
+      "trip": "OPT-07",
+      "service": "S001",
+      "time": 1248.8983708492726,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S001-MED-02": {
+      "trip": "OPT-07",
+      "service": "S001",
+      "time": 1248.8983708492726,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S001-WAT-01": {
+      "trip": "OPT-07",
+      "service": "S001",
+      "time": 1248.8983708492726,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S001-WAT-02": {
+      "trip": "OPT-07",
+      "service": "S001",
+      "time": 1248.8983708492726,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S001-WAT-03": {
+      "trip": "OPT-07",
+      "service": "S001",
+      "time": 1248.8983708492726,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S001-WAT-04": {
+      "trip": "OPT-07",
+      "service": "S001",
+      "time": 1248.8983708492726,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S001-WAT-06": {
+      "trip": "OPT-07",
+      "service": "S001",
+      "time": 1248.8983708492726,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S006-FOD-01": {
+      "trip": "OPT-08",
+      "service": "S006",
+      "time": 1013.1628343606143,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S006-HYG-01": {
+      "trip": "OPT-08",
+      "service": "S006",
+      "time": 1013.1628343606143,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S006-WAT-03": {
+      "trip": "OPT-08",
+      "service": "S006",
+      "time": 1013.1628343606143,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S013-FOD-01": {
+      "trip": "OPT-09",
+      "service": "S013",
+      "time": 2364.845206153629,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S010-FOD-01": {
+      "trip": "OPT-09",
+      "service": "S010",
+      "time": 2771.902956147166,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S002-FOD-01": {
+      "trip": "OPT-10",
+      "service": "S002",
+      "time": 2791.987174029116,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S002-WAT-01": {
+      "trip": "OPT-10",
+      "service": "S002",
+      "time": 2791.987174029116,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S002-WAT-02": {
+      "trip": "OPT-10",
+      "service": "S002",
+      "time": 2791.987174029116,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S002-WAT-03": {
+      "trip": "OPT-10",
+      "service": "S002",
+      "time": 2791.987174029116,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S002-WAT-04": {
+      "trip": "OPT-10",
+      "service": "S002",
+      "time": 2791.987174029116,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S013-MED-01": {
+      "trip": "OPT-11",
+      "service": "S013",
+      "time": 2619.33355895092,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S013-WAT-01": {
+      "trip": "OPT-11",
+      "service": "S013",
+      "time": 2619.33355895092,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S002-MED-01": {
+      "trip": "OPT-11",
+      "service": "S002",
+      "time": 3174.683240232142,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S005-MED-01": {
+      "trip": "OPT-11",
+      "service": "S005",
+      "time": 3732.747385591439,
+      "expected": 10800.0,
+      "hard_deadline": 10800.0
+    },
+    "S001-FOD-01": {
+      "trip": "OPT-12",
+      "service": "S001",
+      "time": 2876.325112547818,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S001-FOD-02": {
+      "trip": "OPT-12",
+      "service": "S001",
+      "time": 2876.325112547818,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S001-FOD-03": {
+      "trip": "OPT-12",
+      "service": "S001",
+      "time": 2876.325112547818,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S001-HYG-01": {
+      "trip": "OPT-12",
+      "service": "S001",
+      "time": 2876.325112547818,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S001-HYG-02": {
+      "trip": "OPT-12",
+      "service": "S001",
+      "time": 2876.325112547818,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S001-WAT-05": {
+      "trip": "OPT-12",
+      "service": "S001",
+      "time": 2876.325112547818,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S001-WAT-07": {
+      "trip": "OPT-12",
+      "service": "S001",
+      "time": 2876.325112547818,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S001-WAT-08": {
+      "trip": "OPT-12",
+      "service": "S001",
+      "time": 2876.325112547818,
+      "expected": 3600.0,
+      "hard_deadline": null
+    },
+    "S007-MED-01": {
+      "trip": "OPT-13",
+      "service": "S007",
+      "time": 2787.714908940342,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S007-WAT-01": {
+      "trip": "OPT-13",
+      "service": "S007",
+      "time": 2787.714908940342,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S014-FOD-01": {
+      "trip": "OPT-14",
+      "service": "S014",
+      "time": 3173.852416578841,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S014-MED-01": {
+      "trip": "OPT-14",
+      "service": "S014",
+      "time": 3173.852416578841,
+      "expected": 7200.0,
+      "hard_deadline": 3600.0
+    },
+    "S014-WAT-01": {
+      "trip": "OPT-14",
+      "service": "S014",
+      "time": 3173.852416578841,
+      "expected": 3600.0,
+      "hard_deadline": 3600.0
+    },
+    "S004-FOD-01": {
+      "trip": "OPT-15",
+      "service": "S004",
+      "time": 4774.416229131002,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S004-HYG-01": {
+      "trip": "OPT-15",
+      "service": "S004",
+      "time": 4774.416229131002,
+      "expected": 14400.0,
+      "hard_deadline": null
+    },
+    "S004-MED-01": {
+      "trip": "OPT-15",
+      "service": "S004",
+      "time": 4774.416229131002,
+      "expected": 7200.0,
+      "hard_deadline": 7200.0
+    },
+    "S004-WAT-01": {
+      "trip": "OPT-15",
+      "service": "S004",
+      "time": 4774.416229131002,
+      "expected": 7200.0,
+      "hard_deadline": 7200.0
+    },
+    "S004-WAT-02": {
+      "trip": "OPT-15",
+      "service": "S004",
+      "time": 4774.416229131002,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S004-WAT-03": {
+      "trip": "OPT-15",
+      "service": "S004",
+      "time": 4774.416229131002,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S003-FOD-01": {
+      "trip": "OPT-16",
+      "service": "S003",
+      "time": 5061.48410839322,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S003-FOD-02": {
+      "trip": "OPT-16",
+      "service": "S003",
+      "time": 5061.48410839322,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S003-HYG-01": {
+      "trip": "OPT-16",
+      "service": "S003",
+      "time": 5061.48410839322,
+      "expected": 14400.0,
+      "hard_deadline": null
+    },
+    "S003-WAT-02": {
+      "trip": "OPT-16",
+      "service": "S003",
+      "time": 5061.48410839322,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S003-WAT-03": {
+      "trip": "OPT-16",
+      "service": "S003",
+      "time": 5061.48410839322,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S003-WAT-04": {
+      "trip": "OPT-16",
+      "service": "S003",
+      "time": 5061.48410839322,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S009-FOD-01": {
+      "trip": "OPT-17",
+      "service": "S009",
+      "time": 4880.545588521292,
+      "expected": 14400.0,
+      "hard_deadline": null
+    },
+    "S009-MED-01": {
+      "trip": "OPT-17",
+      "service": "S009",
+      "time": 4880.545588521292,
+      "expected": 10800.0,
+      "hard_deadline": 10800.0
+    },
+    "S009-WAT-01": {
+      "trip": "OPT-17",
+      "service": "S009",
+      "time": 4880.545588521292,
+      "expected": 10800.0,
+      "hard_deadline": 10800.0
+    },
+    "S015-FOD-01": {
+      "trip": "OPT-18",
+      "service": "S015",
+      "time": 5427.730429868841,
+      "expected": 14400.0,
+      "hard_deadline": null
+    },
+    "S015-MED-01": {
+      "trip": "OPT-18",
+      "service": "S015",
+      "time": 5427.730429868841,
+      "expected": 7200.0,
+      "hard_deadline": 7200.0
+    },
+    "S015-WAT-01": {
+      "trip": "OPT-18",
+      "service": "S015",
+      "time": 5427.730429868841,
+      "expected": 10800.0,
+      "hard_deadline": 10800.0
+    },
+    "S002-FOD-02": {
+      "trip": "OPT-19",
+      "service": "S002",
+      "time": 6540.7432165137325,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S002-HYG-01": {
+      "trip": "OPT-19",
+      "service": "S002",
+      "time": 6540.7432165137325,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S008-FOD-01": {
+      "trip": "OPT-20",
+      "service": "S008",
+      "time": 6988.943502094175,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S008-HYG-01": {
+      "trip": "OPT-20",
+      "service": "S008",
+      "time": 6988.943502094175,
+      "expected": 14400.0,
+      "hard_deadline": null
+    },
+    "S008-MED-01": {
+      "trip": "OPT-20",
+      "service": "S008",
+      "time": 6988.943502094175,
+      "expected": 7200.0,
+      "hard_deadline": 7200.0
+    },
+    "S008-WAT-01": {
+      "trip": "OPT-20",
+      "service": "S008",
+      "time": 6988.943502094175,
+      "expected": 7200.0,
+      "hard_deadline": 7200.0
+    },
+    "S008-WAT-02": {
+      "trip": "OPT-20",
+      "service": "S008",
+      "time": 6988.943502094175,
+      "expected": 7200.0,
+      "hard_deadline": null
+    },
+    "S005-FOD-01": {
+      "trip": "OPT-21",
+      "service": "S005",
+      "time": 7217.433607882589,
+      "expected": 14400.0,
+      "hard_deadline": null
+    },
+    "S005-HYG-01": {
+      "trip": "OPT-21",
+      "service": "S005",
+      "time": 7217.433607882589,
+      "expected": 18000.0,
+      "hard_deadline": null
+    },
+    "S005-WAT-01": {
+      "trip": "OPT-21",
+      "service": "S005",
+      "time": 7217.433607882589,
+      "expected": 10800.0,
+      "hard_deadline": 10800.0
+    },
+    "S005-WAT-02": {
+      "trip": "OPT-21",
+      "service": "S005",
+      "time": 7217.433607882589,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S005-WAT-03": {
+      "trip": "OPT-21",
+      "service": "S005",
+      "time": 7217.433607882589,
+      "expected": 10800.0,
+      "hard_deadline": null
+    },
+    "S011-FOD-01": {
+      "trip": "OPT-22",
+      "service": "S011",
+      "time": 7120.099714832177,
+      "expected": 14400.0,
+      "hard_deadline": null
+    },
+    "S011-MED-01": {
+      "trip": "OPT-22",
+      "service": "S011",
+      "time": 7120.099714832177,
+      "expected": 10800.0,
+      "hard_deadline": 10800.0
+    },
+    "S011-WAT-01": {
+      "trip": "OPT-22",
+      "service": "S011",
+      "time": 7120.099714832177,
+      "expected": 10800.0,
+      "hard_deadline": 10800.0
+    }
+  },
+  "drone_ids": {
+    "A": [
+      "U01",
+      "U02",
+      "U03",
+      "U04"
+    ],
+    "B": [
+      "U05",
+      "U06"
+    ],
+    "C": [
+      "U07",
+      "U08"
+    ]
+  },
+  "battery_ids": {
+    "A": [
+      "A-BAT-01",
+      "A-BAT-02",
+      "A-BAT-03",
+      "A-BAT-04",
+      "A-BAT-05",
+      "A-BAT-06"
+    ],
+    "B": [
+      "B-BAT-01",
+      "B-BAT-02",
+      "B-BAT-03",
+      "B-BAT-04"
+    ],
+    "C": [
+      "C-BAT-01",
+      "C-BAT-02",
+      "C-BAT-03",
+      "C-BAT-04"
+    ]
+  },
+  "method": "Multi-stop local search with enumerated same-model trip orders and earliest available drone/battery assignment; hard and expected deadlines required",
+  "audit": "Recomputed each route, each box deadline, and all drone/battery occupancy intervals"
+}

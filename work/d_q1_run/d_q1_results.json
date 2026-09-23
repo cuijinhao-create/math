@@ -1,0 +1,3507 @@
+{
+  "input_counts": {
+    "nodes": 16,
+    "services": 15,
+    "boxes": 80,
+    "models": 3
+  },
+  "assumptions": {
+    "distance": "WGS84 haversine",
+    "terrain": "All DEM pixels touched by the horizontal segment",
+    "horizontal_energy": "Euse * distance / L(q)",
+    "climb_energy": "(empty_mass_including_battery + payload) * g * positive_climb / (3.6e6 * climb_efficiency)",
+    "priority": "Lexicographic; Q1 has no entity-aircraft or shared-battery scheduling"
+  },
+  "routes": {
+    "S001": {
+      "service": "S001",
+      "distance": 3063.4113262888936,
+      "terrain_max": 223.05661010742188,
+      "cruise_altitude": 273.0566101074219,
+      "dem_cells": 135,
+      "out_climb": 145.3566101074219,
+      "out_descend": 89.05661010742188,
+      "return_climb": 89.05661010742188,
+      "return_descend": 145.3566101074219
+    },
+    "S002": {
+      "service": "S002",
+      "distance": 7435.278518339014,
+      "terrain_max": 261.21807861328125,
+      "cruise_altitude": 311.21807861328125,
+      "dem_cells": 323,
+      "out_climb": 183.51807861328126,
+      "out_descend": 91.71807861328125,
+      "return_climb": 91.71807861328125,
+      "return_descend": 183.51807861328126
+    },
+    "S003": {
+      "service": "S003",
+      "distance": 7261.075570364734,
+      "terrain_max": 511.80413818359375,
+      "cruise_altitude": 561.8041381835938,
+      "dem_cells": 339,
+      "out_climb": 434.10413818359376,
+      "out_descend": 223.30413818359375,
+      "return_climb": 223.30413818359375,
+      "return_descend": 434.10413818359376
+    },
+    "S004": {
+      "service": "S004",
+      "distance": 7745.662441501828,
+      "terrain_max": 348.2391662597656,
+      "cruise_altitude": 398.2391662597656,
+      "dem_cells": 277,
+      "out_climb": 270.53916625976564,
+      "out_descend": 169.9391662597656,
+      "return_climb": 169.9391662597656,
+      "return_descend": 270.53916625976564
+    },
+    "S005": {
+      "service": "S005",
+      "distance": 5302.020131150288,
+      "terrain_max": 276.410888671875,
+      "cruise_altitude": 326.410888671875,
+      "dem_cells": 183,
+      "out_climb": 198.710888671875,
+      "out_descend": 131.410888671875,
+      "return_climb": 131.410888671875,
+      "return_descend": 198.710888671875
+    },
+    "S006": {
+      "service": "S006",
+      "distance": 3181.0333082558936,
+      "terrain_max": 318.4154968261719,
+      "cruise_altitude": 368.4154968261719,
+      "dem_cells": 116,
+      "out_climb": 240.7154968261719,
+      "out_descend": 53.615496826171864,
+      "return_climb": 53.615496826171864,
+      "return_descend": 240.7154968261719
+    },
+    "S007": {
+      "service": "S007",
+      "distance": 4533.827897987505,
+      "terrain_max": 451.8304748535156,
+      "cruise_altitude": 501.8304748535156,
+      "dem_cells": 213,
+      "out_climb": 374.13047485351564,
+      "out_descend": 153.33047485351562,
+      "return_climb": 153.33047485351562,
+      "return_descend": 374.13047485351564
+    },
+    "S008": {
+      "service": "S008",
+      "distance": 8109.473184928188,
+      "terrain_max": 317.5588684082031,
+      "cruise_altitude": 367.5588684082031,
+      "dem_cells": 323,
+      "out_climb": 239.85886840820314,
+      "out_descend": 96.65886840820315,
+      "return_climb": 96.65886840820315,
+      "return_descend": 239.85886840820314
+    },
+    "S009": {
+      "service": "S009",
+      "distance": 5722.680393214659,
+      "terrain_max": 243.22891235351562,
+      "cruise_altitude": 293.2289123535156,
+      "dem_cells": 253,
+      "out_climb": 165.52891235351564,
+      "out_descend": 63.228912353515625,
+      "return_climb": 63.228912353515625,
+      "return_descend": 165.52891235351564
+    },
+    "S010": {
+      "service": "S010",
+      "distance": 4778.439901620956,
+      "terrain_max": 385.63653564453125,
+      "cruise_altitude": 435.63653564453125,
+      "dem_cells": 202,
+      "out_climb": 307.93653564453126,
+      "out_descend": 84.03653564453123,
+      "return_climb": 84.03653564453123,
+      "return_descend": 307.93653564453126
+    },
+    "S011": {
+      "service": "S011",
+      "distance": 2817.1517251515784,
+      "terrain_max": 245.36175537109375,
+      "cruise_altitude": 295.36175537109375,
+      "dem_cells": 123,
+      "out_climb": 167.66175537109376,
+      "out_descend": 83.26175537109376,
+      "return_climb": 83.26175537109376,
+      "return_descend": 167.66175537109376
+    },
+    "S012": {
+      "service": "S012",
+      "distance": 7398.4495612874725,
+      "terrain_max": 377.0903625488281,
+      "cruise_altitude": 427.0903625488281,
+      "dem_cells": 355,
+      "out_climb": 299.39036254882814,
+      "out_descend": 147.2903625488281,
+      "return_climb": 147.2903625488281,
+      "return_descend": 299.39036254882814
+    },
+    "S013": {
+      "service": "S013",
+      "distance": 4848.706999909886,
+      "terrain_max": 342.7518310546875,
+      "cruise_altitude": 392.7518310546875,
+      "dem_cells": 227,
+      "out_climb": 265.0518310546875,
+      "out_descend": 41.05183105468751,
+      "return_climb": 41.05183105468751,
+      "return_descend": 265.0518310546875
+    },
+    "S014": {
+      "service": "S014",
+      "distance": 5410.917094369381,
+      "terrain_max": 525.5438232421875,
+      "cruise_altitude": 575.5438232421875,
+      "dem_cells": 202,
+      "out_climb": 447.8438232421875,
+      "out_descend": 224.5438232421875,
+      "return_climb": 224.5438232421875,
+      "return_descend": 447.8438232421875
+    },
+    "S015": {
+      "service": "S015",
+      "distance": 6019.113948538092,
+      "terrain_max": 521.7992553710938,
+      "cruise_altitude": 571.7992553710938,
+      "dem_cells": 288,
+      "out_climb": 444.09925537109376,
+      "out_descend": 97.29925537109375,
+      "return_climb": 97.29925537109375,
+      "return_descend": 444.09925537109376
+    }
+  },
+  "safety": [
+    {
+      "service": "S001",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 1.1649100946018849,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S001",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 0.9329079662820039,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S001",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 1.9471695293351372,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S002",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 2.7495938338430217,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S002",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 2.192052174820625,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S002",
+      "model": "C",
+      "max_safe_payload_kg": 68.52718567690209,
+      "roundtrip_empty_kwh": 4.648345444859036,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S003",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 2.7880952690429317,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S003",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 2.2362647935507214,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S003",
+      "model": "C",
+      "max_safe_payload_kg": 68.23549018466116,
+      "roundtrip_empty_kwh": 4.642213535053854,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S004",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 2.905094797911409,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S004",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 2.3213701366162196,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S004",
+      "model": "C",
+      "max_safe_payload_kg": 63.259311007328236,
+      "roundtrip_empty_kwh": 4.883051169549169,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S005",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 1.9961567267454177,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S005",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 1.5960474113220164,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S005",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 3.350086199444249,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S006",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 1.2231226363128056,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S006",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 0.9812494016037476,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S006",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 2.0353982462026154,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S007",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 1.771870845964974,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S007",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 1.4250941447795111,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S007",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 2.929541178765853,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S008",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 3.008533732555067,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S008",
+      "model": "B",
+      "max_safe_payload_kg": 28.679453077528315,
+      "roundtrip_empty_kwh": 2.3997497683903357,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S008",
+      "model": "C",
+      "max_safe_payload_kg": 58.51636885839215,
+      "roundtrip_empty_kwh": 5.079441103736975,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S009",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 2.1207491832688605,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S009",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 1.6913083367935156,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S009",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 3.582147165542335,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S010",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 1.824048546053059,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S010",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 1.4616637118276796,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S010",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 3.044240282207784,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S011",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 1.0806292249370495,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S011",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 0.8666083393627548,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S011",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 1.7999914995965876,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S012",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 2.7817408032110693,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S012",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 2.223691767147744,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S012",
+      "model": "C",
+      "max_safe_payload_kg": 67.84626270976703,
+      "roundtrip_empty_kwh": 4.671022000347022,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S013",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 1.8266030398216264,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S013",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 1.4606227684101731,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S013",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 3.0647723999350847,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S014",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 2.1260053553378384,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S014",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 1.7113318568014795,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S014",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 3.507615943216596,
+      "energy_limit_kwh": 6.4
+    },
+    {
+      "service": "S015",
+      "model": "A",
+      "max_safe_payload_kg": 25.0,
+      "roundtrip_empty_kwh": 2.3102650490107077,
+      "energy_limit_kwh": 3.6
+    },
+    {
+      "service": "S015",
+      "model": "B",
+      "max_safe_payload_kg": 30.0,
+      "roundtrip_empty_kwh": 1.8528891537238072,
+      "energy_limit_kwh": 3.2
+    },
+    {
+      "service": "S015",
+      "model": "C",
+      "max_safe_payload_kg": 80.0,
+      "roundtrip_empty_kwh": 3.847249315389229,
+      "energy_limit_kwh": 6.4
+    }
+  ],
+  "strategies": {
+    "sorties_then_energy_then_time": {
+      "summary": {
+        "sorties": 18,
+        "energy_kwh": 59.2288693519579,
+        "work_time_s": 32768.914468871175,
+        "delivered_boxes": 80
+      },
+      "trips": [
+        {
+          "service": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ],
+          "mass": 76.0,
+          "volume": 0.231,
+          "energy": 2.926237390911867,
+          "work_time": 1693.4267416985451,
+          "return_soc": 63.422032613601665
+        },
+        {
+          "service": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-FOD-01"
+          ],
+          "mass": 78.0,
+          "volume": 0.163,
+          "energy": 3.004662059347571,
+          "work_time": 1495.4267416985451,
+          "return_soc": 62.44172425815536
+        },
+        {
+          "service": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-FOD-01",
+            "S002-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.144,
+          "energy": 5.7410106363380145,
+          "work_time": 2049.0830106157746,
+          "return_soc": 28.237367045774818
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-04",
+            "S002-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.723225599444931,
+          "work_time": 1823.210317744681,
+          "return_soc": 31.91936001387673
+        },
+        {
+          "service": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-FOD-01",
+            "S003-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.144,
+          "energy": 5.763281578899006,
+          "work_time": 2369.8108581124334,
+          "return_soc": 27.958980263762424
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-04",
+            "S003-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7791017852578364,
+          "work_time": 2080.2428120512354,
+          "return_soc": 30.52245536855409
+        },
+        {
+          "service": "S004",
+          "model": "C",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 6.176858606791639,
+          "work_time": 2305.185491467822,
+          "return_soc": 22.789267415104508
+        },
+        {
+          "service": "S005",
+          "model": "C",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 4.238735064547576,
+          "work_time": 1880.0456170960802,
+          "return_soc": 47.0158116931553
+        },
+        {
+          "service": "S006",
+          "model": "C",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 2.595678150752536,
+          "work_time": 1565.0356687212284,
+          "return_soc": 67.5540231155933
+        },
+        {
+          "service": "S007",
+          "model": "C",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02",
+            "S007-FOD-01",
+            "S007-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 3.403284441394875,
+          "work_time": 1889.2252411346622,
+          "return_soc": 57.45894448256406
+        },
+        {
+          "service": "S008",
+          "model": "C",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-WAT-02",
+            "S008-FOD-01",
+            "S008-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 5.853710552573132,
+          "work_time": 2194.129054458524,
+          "return_soc": 26.828618092835853
+        },
+        {
+          "service": "S009",
+          "model": "B",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1024310782372955,
+          "work_time": 1560.7797905471107,
+          "return_soc": 47.43922304406761
+        },
+        {
+          "service": "S010",
+          "model": "B",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.82100440600736,
+          "work_time": 1554.57223916144,
+          "return_soc": 54.474889849816
+        },
+        {
+          "service": "S011",
+          "model": "B",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.0771461381899656,
+          "work_time": 1189.6308045644814,
+          "return_soc": 73.07134654525086
+        },
+        {
+          "service": "S012",
+          "model": "B",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7632799914213146,
+          "work_time": 1944.0258065766109,
+          "return_soc": 30.918000214467135
+        },
+        {
+          "service": "S013",
+          "model": "B",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8207629916170749,
+          "work_time": 1500.9702855348598,
+          "return_soc": 54.48092520957313
+        },
+        {
+          "service": "S014",
+          "model": "B",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1276131486007412,
+          "work_time": 1844.5398866711257,
+          "return_soc": 46.80967128498147
+        },
+        {
+          "service": "S015",
+          "model": "B",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.310845731625163,
+          "work_time": 1829.5741010160164,
+          "return_soc": 42.22885670937092
+        }
+      ]
+    },
+    "energy_then_sorties_then_time": {
+      "summary": {
+        "sorties": 19,
+        "energy_kwh": 59.128390845779805,
+        "work_time_s": 34430.870944390896,
+        "delivered_boxes": 80
+      },
+      "trips": [
+        {
+          "service": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ],
+          "mass": 76.0,
+          "volume": 0.231,
+          "energy": 2.926237390911867,
+          "work_time": 1693.4267416985451,
+          "return_soc": 63.422032613601665
+        },
+        {
+          "service": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-FOD-01"
+          ],
+          "mass": 78.0,
+          "volume": 0.163,
+          "energy": 3.004662059347571,
+          "work_time": 1495.4267416985451,
+          "return_soc": 62.44172425815536
+        },
+        {
+          "service": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-FOD-01",
+            "S002-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.144,
+          "energy": 5.7410106363380145,
+          "work_time": 2049.0830106157746,
+          "return_soc": 28.237367045774818
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-04",
+            "S002-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.723225599444931,
+          "work_time": 1823.210317744681,
+          "return_soc": 31.91936001387673
+        },
+        {
+          "service": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-FOD-01",
+            "S003-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.144,
+          "energy": 5.763281578899006,
+          "work_time": 2369.8108581124334,
+          "return_soc": 27.958980263762424
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-04",
+            "S003-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7791017852578364,
+          "work_time": 2080.2428120512354,
+          "return_soc": 30.52245536855409
+        },
+        {
+          "service": "S004",
+          "model": "C",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 6.176858606791639,
+          "work_time": 2305.185491467822,
+          "return_soc": 22.789267415104508
+        },
+        {
+          "service": "S005",
+          "model": "C",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 4.238735064547576,
+          "work_time": 1880.0456170960802,
+          "return_soc": 47.0158116931553
+        },
+        {
+          "service": "S006",
+          "model": "C",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 2.595678150752536,
+          "work_time": 1565.0356687212284,
+          "return_soc": 67.5540231155933
+        },
+        {
+          "service": "S007",
+          "model": "C",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02",
+            "S007-FOD-01",
+            "S007-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 3.403284441394875,
+          "work_time": 1889.2252411346622,
+          "return_soc": 57.45894448256406
+        },
+        {
+          "service": "S008",
+          "model": "B",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-02",
+            "S008-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.9828424789767296,
+          "work_time": 1958.042764989123,
+          "return_soc": 25.42893802558176
+        },
+        {
+          "service": "S008",
+          "model": "B",
+          "boxes": [
+            "S008-WAT-01",
+            "S008-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 2.7703895674183103,
+          "work_time": 1898.042764989123,
+          "return_soc": 30.740260814542243
+        },
+        {
+          "service": "S009",
+          "model": "B",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1024310782372955,
+          "work_time": 1560.7797905471107,
+          "return_soc": 47.43922304406761
+        },
+        {
+          "service": "S010",
+          "model": "B",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.82100440600736,
+          "work_time": 1554.57223916144,
+          "return_soc": 54.474889849816
+        },
+        {
+          "service": "S011",
+          "model": "B",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.0771461381899656,
+          "work_time": 1189.6308045644814,
+          "return_soc": 73.07134654525086
+        },
+        {
+          "service": "S012",
+          "model": "B",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7632799914213146,
+          "work_time": 1944.0258065766109,
+          "return_soc": 30.918000214467135
+        },
+        {
+          "service": "S013",
+          "model": "B",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8207629916170749,
+          "work_time": 1500.9702855348598,
+          "return_soc": 54.48092520957313
+        },
+        {
+          "service": "S014",
+          "model": "B",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1276131486007412,
+          "work_time": 1844.5398866711257,
+          "return_soc": 46.80967128498147
+        },
+        {
+          "service": "S015",
+          "model": "B",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.310845731625163,
+          "work_time": 1829.5741010160164,
+          "return_soc": 42.22885670937092
+        }
+      ]
+    },
+    "time_then_sorties_then_energy": {
+      "summary": {
+        "sorties": 18,
+        "energy_kwh": 59.2288693519579,
+        "work_time_s": 32768.914468871175,
+        "delivered_boxes": 80
+      },
+      "trips": [
+        {
+          "service": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ],
+          "mass": 76.0,
+          "volume": 0.231,
+          "energy": 2.926237390911867,
+          "work_time": 1693.4267416985451,
+          "return_soc": 63.422032613601665
+        },
+        {
+          "service": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-FOD-01"
+          ],
+          "mass": 78.0,
+          "volume": 0.163,
+          "energy": 3.004662059347571,
+          "work_time": 1495.4267416985451,
+          "return_soc": 62.44172425815536
+        },
+        {
+          "service": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-WAT-03",
+            "S002-FOD-01",
+            "S002-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.144,
+          "energy": 5.7410106363380145,
+          "work_time": 2049.0830106157746,
+          "return_soc": 28.237367045774818
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-04",
+            "S002-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.723225599444931,
+          "work_time": 1823.210317744681,
+          "return_soc": 31.91936001387673
+        },
+        {
+          "service": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-WAT-02",
+            "S003-WAT-03",
+            "S003-FOD-01",
+            "S003-HYG-01"
+          ],
+          "mass": 56.0,
+          "volume": 0.144,
+          "energy": 5.763281578899006,
+          "work_time": 2369.8108581124334,
+          "return_soc": 27.958980263762424
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-04",
+            "S003-FOD-02"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7791017852578364,
+          "work_time": 2080.2428120512354,
+          "return_soc": 30.52245536855409
+        },
+        {
+          "service": "S004",
+          "model": "C",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 6.176858606791639,
+          "work_time": 2305.185491467822,
+          "return_soc": 22.789267415104508
+        },
+        {
+          "service": "S005",
+          "model": "C",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 4.238735064547576,
+          "work_time": 1880.0456170960802,
+          "return_soc": 47.0158116931553
+        },
+        {
+          "service": "S006",
+          "model": "C",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 2.595678150752536,
+          "work_time": 1565.0356687212284,
+          "return_soc": 67.5540231155933
+        },
+        {
+          "service": "S007",
+          "model": "C",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02",
+            "S007-FOD-01",
+            "S007-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 3.403284441394875,
+          "work_time": 1889.2252411346622,
+          "return_soc": 57.45894448256406
+        },
+        {
+          "service": "S008",
+          "model": "C",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-WAT-02",
+            "S008-FOD-01",
+            "S008-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 5.853710552573132,
+          "work_time": 2194.129054458524,
+          "return_soc": 26.828618092835853
+        },
+        {
+          "service": "S009",
+          "model": "B",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1024310782372955,
+          "work_time": 1560.7797905471107,
+          "return_soc": 47.43922304406761
+        },
+        {
+          "service": "S010",
+          "model": "B",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.82100440600736,
+          "work_time": 1554.57223916144,
+          "return_soc": 54.474889849816
+        },
+        {
+          "service": "S011",
+          "model": "B",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.0771461381899656,
+          "work_time": 1189.6308045644814,
+          "return_soc": 73.07134654525086
+        },
+        {
+          "service": "S012",
+          "model": "B",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7632799914213146,
+          "work_time": 1944.0258065766109,
+          "return_soc": 30.918000214467135
+        },
+        {
+          "service": "S013",
+          "model": "B",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8207629916170749,
+          "work_time": 1500.9702855348598,
+          "return_soc": 54.48092520957313
+        },
+        {
+          "service": "S014",
+          "model": "B",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1276131486007412,
+          "work_time": 1844.5398866711257,
+          "return_soc": 46.80967128498147
+        },
+        {
+          "service": "S015",
+          "model": "B",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.310845731625163,
+          "work_time": 1829.5741010160164,
+          "return_soc": 42.22885670937092
+        }
+      ]
+    }
+  },
+  "fixed_model_results": {
+    "A": {
+      "summary": {
+        "sorties": 52,
+        "energy_kwh": 112.35753346755685,
+        "work_time_s": 89351.26910163056,
+        "delivered_boxes": 80
+      },
+      "trips": [
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-MED-01",
+            "S001-HYG-02"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 1.1947562338315216,
+          "work_time": 1252.4715825390344,
+          "return_soc": 73.44986147041064
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-MED-02",
+            "S001-HYG-01"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 1.1947562338315216,
+          "work_time": 1252.4715825390344,
+          "return_soc": 73.44986147041064
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-WAT-02",
+            "S001-FOD-03"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.2860521544512138,
+          "work_time": 1252.4715825390344,
+          "return_soc": 71.42106323441747
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-WAT-07",
+            "S001-FOD-02"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.2860521544512138,
+          "work_time": 1252.4715825390344,
+          "return_soc": 71.42106323441747
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-WAT-08",
+            "S001-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.2860521544512138,
+          "work_time": 1252.4715825390344,
+          "return_soc": 71.42106323441747
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.2230529130159253,
+          "work_time": 1192.4715825390344,
+          "return_soc": 72.82104637742388
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-WAT-03"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.2230529130159253,
+          "work_time": 1192.4715825390344,
+          "return_soc": 72.82104637742388
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-WAT-04"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.2230529130159253,
+          "work_time": 1192.4715825390344,
+          "return_soc": 72.82104637742388
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-WAT-05"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.2230529130159253,
+          "work_time": 1192.4715825390344,
+          "return_soc": 72.82104637742388
+        },
+        {
+          "service": "S001",
+          "model": "A",
+          "boxes": [
+            "S001-WAT-06"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.2230529130159253,
+          "work_time": 1192.4715825390344,
+          "return_soc": 72.82104637742388
+        },
+        {
+          "service": "S002",
+          "model": "A",
+          "boxes": [
+            "S002-MED-01",
+            "S002-HYG-01"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 2.816269963655343,
+          "work_time": 2011.0529350226484,
+          "return_soc": 37.41622302988126
+        },
+        {
+          "service": "S002",
+          "model": "A",
+          "boxes": [
+            "S002-WAT-02",
+            "S002-FOD-02"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 3.029530477811277,
+          "work_time": 2011.0529350226484,
+          "return_soc": 32.67710049308273
+        },
+        {
+          "service": "S002",
+          "model": "A",
+          "boxes": [
+            "S002-WAT-03",
+            "S002-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 3.029530477811277,
+          "work_time": 2011.0529350226484,
+          "return_soc": 32.67710049308273
+        },
+        {
+          "service": "S002",
+          "model": "A",
+          "boxes": [
+            "S002-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.8817472042793177,
+          "work_time": 1951.0529350226484,
+          "return_soc": 35.961173238237386
+        },
+        {
+          "service": "S002",
+          "model": "A",
+          "boxes": [
+            "S002-WAT-04"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.8817472042793177,
+          "work_time": 1951.0529350226484,
+          "return_soc": 35.961173238237386
+        },
+        {
+          "service": "S003",
+          "model": "A",
+          "boxes": [
+            "S003-MED-01",
+            "S003-HYG-01"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 2.861888308617355,
+          "work_time": 2262.2786643967265,
+          "return_soc": 36.40248203072544
+        },
+        {
+          "service": "S003",
+          "model": "A",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-FOD-02"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 3.082688740699766,
+          "work_time": 2262.2786643967265,
+          "return_soc": 31.495805762227423
+        },
+        {
+          "service": "S003",
+          "model": "A",
+          "boxes": [
+            "S003-WAT-02",
+            "S003-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 3.082688740699766,
+          "work_time": 2262.2786643967265,
+          "return_soc": 31.495805762227423
+        },
+        {
+          "service": "S003",
+          "model": "A",
+          "boxes": [
+            "S003-WAT-03"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.9306531787288366,
+          "work_time": 2202.2786643967265,
+          "return_soc": 34.87437380602585
+        },
+        {
+          "service": "S003",
+          "model": "A",
+          "boxes": [
+            "S003-WAT-04"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.9306531787288366,
+          "work_time": 2202.2786643967265,
+          "return_soc": 34.87437380602585
+        },
+        {
+          "service": "S004",
+          "model": "A",
+          "boxes": [
+            "S004-MED-01",
+            "S004-HYG-01"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 2.9772565894687553,
+          "work_time": 2183.961184097961,
+          "return_soc": 33.83874245624988
+        },
+        {
+          "service": "S004",
+          "model": "A",
+          "boxes": [
+            "S004-WAT-02",
+            "S004-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 3.2033229099434126,
+          "work_time": 2183.961184097961,
+          "return_soc": 28.81504644570194
+        },
+        {
+          "service": "S004",
+          "model": "A",
+          "boxes": [
+            "S004-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 3.0469684299818,
+          "work_time": 2123.961184097961,
+          "return_soc": 32.28959044484889
+        },
+        {
+          "service": "S004",
+          "model": "A",
+          "boxes": [
+            "S004-WAT-03"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 3.0469684299818,
+          "work_time": 2123.961184097961,
+          "return_soc": 32.28959044484889
+        },
+        {
+          "service": "S005",
+          "model": "A",
+          "boxes": [
+            "S005-MED-01",
+            "S005-HYG-01"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 2.046013001380382,
+          "work_time": 1695.759325243798,
+          "return_soc": 54.5330444137693
+        },
+        {
+          "service": "S005",
+          "model": "A",
+          "boxes": [
+            "S005-WAT-01",
+            "S005-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 2.201423845864114,
+          "work_time": 1695.759325243798,
+          "return_soc": 51.07947009190858
+        },
+        {
+          "service": "S005",
+          "model": "A",
+          "boxes": [
+            "S005-WAT-02"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.0939875975302593,
+          "work_time": 1635.759325243798,
+          "return_soc": 53.46694227710535
+        },
+        {
+          "service": "S005",
+          "model": "A",
+          "boxes": [
+            "S005-WAT-03"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.0939875975302593,
+          "work_time": 1635.759325243798,
+          "return_soc": 53.46694227710535
+        },
+        {
+          "service": "S006",
+          "model": "A",
+          "boxes": [
+            "S006-MED-01",
+            "S006-HYG-01"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 1.2571717528808564,
+          "work_time": 1316.0149467210344,
+          "return_soc": 72.06284993598098
+        },
+        {
+          "service": "S006",
+          "model": "A",
+          "boxes": [
+            "S006-WAT-01",
+            "S006-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.3563887335802747,
+          "work_time": 1316.0149467210344,
+          "return_soc": 69.85802814266056
+        },
+        {
+          "service": "S006",
+          "model": "A",
+          "boxes": [
+            "S006-WAT-02"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.2882532445534307,
+          "work_time": 1256.0149467210344,
+          "return_soc": 71.37215012103488
+        },
+        {
+          "service": "S006",
+          "model": "A",
+          "boxes": [
+            "S006-WAT-03"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.2882532445534307,
+          "work_time": 1256.0149467210344,
+          "return_soc": 71.37215012103488
+        },
+        {
+          "service": "S007",
+          "model": "A",
+          "boxes": [
+            "S007-MED-01",
+            "S007-HYG-01"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 1.821457142135926,
+          "work_time": 1712.4426794497404,
+          "return_soc": 59.52317461920165
+        },
+        {
+          "service": "S007",
+          "model": "A",
+          "boxes": [
+            "S007-WAT-01",
+            "S007-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.964395013292917,
+          "work_time": 1712.4426794497404,
+          "return_soc": 56.346777482379615
+        },
+        {
+          "service": "S007",
+          "model": "A",
+          "boxes": [
+            "S007-WAT-02"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.8663439309295882,
+          "work_time": 1652.4426794497404,
+          "return_soc": 58.525690423786926
+        },
+        {
+          "service": "S008",
+          "model": "A",
+          "boxes": [
+            "S008-MED-01",
+            "S008-HYG-01"
+          ],
+          "mass": 9.0,
+          "volume": 0.047,
+          "energy": 3.0826075561026665,
+          "work_time": 2168.358537820063,
+          "return_soc": 31.49760986438519
+        },
+        {
+          "service": "S008",
+          "model": "A",
+          "boxes": [
+            "S008-WAT-01",
+            "S008-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 3.3171581312730156,
+          "work_time": 2168.358537820063,
+          "return_soc": 26.285374860599653
+        },
+        {
+          "service": "S008",
+          "model": "A",
+          "boxes": [
+            "S008-WAT-02"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 3.1547729683433685,
+          "work_time": 2108.358537820063,
+          "return_soc": 29.89393403681403
+        },
+        {
+          "service": "S009",
+          "model": "A",
+          "boxes": [
+            "S009-MED-01",
+            "S009-FOD-01"
+          ],
+          "mass": 11.0,
+          "volume": 0.04,
+          "energy": 2.1914941509818293,
+          "work_time": 1691.5358036542661,
+          "return_soc": 51.300129978181566
+        },
+        {
+          "service": "S009",
+          "model": "A",
+          "boxes": [
+            "S009-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.2237492596489985,
+          "work_time": 1631.5358036542661,
+          "return_soc": 50.583349785577816
+        },
+        {
+          "service": "S010",
+          "model": "A",
+          "boxes": [
+            "S010-MED-01",
+            "S010-FOD-01"
+          ],
+          "mass": 11.0,
+          "volume": 0.04,
+          "energy": 1.890183970194125,
+          "work_time": 1653.853569215472,
+          "return_soc": 57.99591177346388
+        },
+        {
+          "service": "S010",
+          "model": "A",
+          "boxes": [
+            "S010-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.9190433652476449,
+          "work_time": 1593.853569215472,
+          "return_soc": 57.35459188338567
+        },
+        {
+          "service": "S011",
+          "model": "A",
+          "boxes": [
+            "S011-MED-01",
+            "S011-FOD-01"
+          ],
+          "mass": 11.0,
+          "volume": 0.04,
+          "energy": 1.1190418682589716,
+          "work_time": 1223.5358620695338,
+          "return_soc": 75.13240292757841
+        },
+        {
+          "service": "S011",
+          "model": "A",
+          "boxes": [
+            "S011-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.1358984766255067,
+          "work_time": 1163.5358620695338,
+          "return_soc": 74.7578116305443
+        },
+        {
+          "service": "S012",
+          "model": "A",
+          "boxes": [
+            "S012-MED-01",
+            "S012-FOD-01"
+          ],
+          "mass": 11.0,
+          "volume": 0.04,
+          "energy": 2.8767557045421914,
+          "work_time": 2130.64079195286,
+          "return_soc": 36.07209545461797
+        },
+        {
+          "service": "S012",
+          "model": "A",
+          "boxes": [
+            "S012-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.9194252558776475,
+          "work_time": 2070.64079195286,
+          "return_soc": 35.12388320271894
+        },
+        {
+          "service": "S013",
+          "model": "A",
+          "boxes": [
+            "S013-MED-01",
+            "S013-FOD-01"
+          ],
+          "mass": 11.0,
+          "volume": 0.04,
+          "energy": 1.8917377693014288,
+          "work_time": 1602.5938521985227,
+          "return_soc": 57.961382904412694
+        },
+        {
+          "service": "S013",
+          "model": "A",
+          "boxes": [
+            "S013-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 1.9204833922370774,
+          "work_time": 1542.5938521985227,
+          "return_soc": 57.3225912836205
+        },
+        {
+          "service": "S014",
+          "model": "A",
+          "boxes": [
+            "S014-MED-01",
+            "S014-FOD-01"
+          ],
+          "mass": 11.0,
+          "volume": 0.04,
+          "energy": 2.2050208445113837,
+          "work_time": 1964.9037898167717,
+          "return_soc": 50.999536788635915
+        },
+        {
+          "service": "S014",
+          "model": "A",
+          "boxes": [
+            "S014-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.238825452077246,
+          "work_time": 1904.9037898167717,
+          "return_soc": 50.248323287172305
+        },
+        {
+          "service": "S015",
+          "model": "A",
+          "boxes": [
+            "S015-MED-01",
+            "S015-FOD-01"
+          ],
+          "mass": 11.0,
+          "volume": 0.04,
+          "energy": 2.395911209380844,
+          "work_time": 1970.2112326339527,
+          "return_soc": 46.757528680425686
+        },
+        {
+          "service": "S015",
+          "model": "A",
+          "boxes": [
+            "S015-WAT-01"
+          ],
+          "mass": 14.0,
+          "volume": 0.027,
+          "energy": 2.432901657938286,
+          "work_time": 1910.2112326339527,
+          "return_soc": 45.93551871248253
+        }
+      ]
+    },
+    "B": {
+      "summary": {
+        "sorties": 35,
+        "energy_kwh": 68.46376217815848,
+        "work_time_s": 55673.46101067062,
+        "delivered_boxes": 80
+      },
+      "trips": [
+        {
+          "service": "S001",
+          "model": "B",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-08"
+          ],
+          "mass": 20.0,
+          "volume": 0.051000000000000004,
+          "energy": 1.0770625138134342,
+          "work_time": 1210.357871662738,
+          "return_soc": 73.07343715466415
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "boxes": [
+            "S001-WAT-06",
+            "S001-WAT-07"
+          ],
+          "mass": 28.0,
+          "volume": 0.054,
+          "energy": 1.2239363440541573,
+          "work_time": 1150.357871662738,
+          "return_soc": 69.40159139864606
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "boxes": [
+            "S001-WAT-03",
+            "S001-FOD-03"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.1061631197232318,
+          "work_time": 1150.357871662738,
+          "return_soc": 72.34592200691921
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "boxes": [
+            "S001-WAT-04",
+            "S001-FOD-02"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.1061631197232318,
+          "work_time": 1150.357871662738,
+          "return_soc": 72.34592200691921
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "boxes": [
+            "S001-WAT-05",
+            "S001-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.1061631197232318,
+          "work_time": 1150.357871662738,
+          "return_soc": 72.34592200691921
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-HYG-02"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 1.0770625138134342,
+          "work_time": 1150.357871662738,
+          "return_soc": 73.07343715466415
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "boxes": [
+            "S001-WAT-02",
+            "S001-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 1.0770625138134342,
+          "work_time": 1150.357871662738,
+          "return_soc": 73.07343715466415
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-04"
+          ],
+          "mass": 17.0,
+          "volume": 0.039,
+          "energy": 2.4414818663077655,
+          "work_time": 1763.210317744681,
+          "return_soc": 38.96295334230586
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-FOD-02"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 2.5984737481820988,
+          "work_time": 1763.210317744681,
+          "return_soc": 35.03815629544753
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-WAT-03",
+            "S002-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 2.5984737481820988,
+          "work_time": 1763.210317744681,
+          "return_soc": 35.03815629544753
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "boxes": [
+            "S002-WAT-02",
+            "S002-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 2.5291238962594274,
+          "work_time": 1763.210317744681,
+          "return_soc": 36.77190259351432
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-04"
+          ],
+          "mass": 17.0,
+          "volume": 0.039,
+          "energy": 2.496244355856515,
+          "work_time": 2020.2428120512354,
+          "return_soc": 37.593891103587126
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-WAT-02",
+            "S003-FOD-02"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 2.6543797484406504,
+          "work_time": 2020.2428120512354,
+          "return_soc": 33.640506288983744
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-WAT-03",
+            "S003-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 2.6543797484406504,
+          "work_time": 2020.2428120512354,
+          "return_soc": 33.640506288983744
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 2.584726026387685,
+          "work_time": 2020.2428120512354,
+          "return_soc": 35.38184934030788
+        },
+        {
+          "service": "S004",
+          "model": "B",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-03"
+          ],
+          "mass": 17.0,
+          "volume": 0.039,
+          "energy": 2.586316522591356,
+          "work_time": 1925.7724360479,
+          "return_soc": 35.3420869352161
+        },
+        {
+          "service": "S004",
+          "model": "B",
+          "boxes": [
+            "S004-WAT-02",
+            "S004-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 2.7513632611626333,
+          "work_time": 1925.7724360479,
+          "return_soc": 31.215918470934167
+        },
+        {
+          "service": "S004",
+          "model": "B",
+          "boxes": [
+            "S004-WAT-01",
+            "S004-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 2.6785179090037703,
+          "work_time": 1925.7724360479,
+          "return_soc": 33.03705227490574
+        },
+        {
+          "service": "S005",
+          "model": "B",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-03"
+          ],
+          "mass": 17.0,
+          "volume": 0.039,
+          "energy": 1.778276884704764,
+          "work_time": 1519.0253208721217,
+          "return_soc": 55.5430778823809
+        },
+        {
+          "service": "S005",
+          "model": "B",
+          "boxes": [
+            "S005-WAT-02",
+            "S005-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.891509624044251,
+          "work_time": 1519.0253208721217,
+          "return_soc": 52.71225939889372
+        },
+        {
+          "service": "S005",
+          "model": "B",
+          "boxes": [
+            "S005-WAT-01",
+            "S005-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 1.8415435811349716,
+          "work_time": 1519.0253208721217,
+          "return_soc": 53.961410471625705
+        },
+        {
+          "service": "S006",
+          "model": "B",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-03"
+          ],
+          "mass": 17.0,
+          "volume": 0.039,
+          "energy": 1.0983953366373942,
+          "work_time": 1209.9805031125045,
+          "return_soc": 72.54011658406515
+        },
+        {
+          "service": "S006",
+          "model": "B",
+          "boxes": [
+            "S006-WAT-02",
+            "S006-FOD-01"
+          ],
+          "mass": 22.0,
+          "volume": 0.055,
+          "energy": 1.1686295138875775,
+          "work_time": 1209.9805031125045,
+          "return_soc": 70.78426215281056
+        },
+        {
+          "service": "S006",
+          "model": "B",
+          "boxes": [
+            "S006-WAT-01",
+            "S006-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 1.1377322322431314,
+          "work_time": 1209.9805031125045,
+          "return_soc": 71.55669419392171
+        },
+        {
+          "service": "S007",
+          "model": "B",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-02",
+            "S007-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.7737919193267686,
+          "work_time": 1621.3150828501568,
+          "return_soc": 55.655202016830785
+        },
+        {
+          "service": "S007",
+          "model": "B",
+          "boxes": [
+            "S007-WAT-01",
+            "S007-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 1.6504734786068538,
+          "work_time": 1561.3150828501568,
+          "return_soc": 58.73816303482866
+        },
+        {
+          "service": "S008",
+          "model": "B",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-02",
+            "S008-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.9828424789767296,
+          "work_time": 1958.042764989123,
+          "return_soc": 25.42893802558176
+        },
+        {
+          "service": "S008",
+          "model": "B",
+          "boxes": [
+            "S008-WAT-01",
+            "S008-HYG-01"
+          ],
+          "mass": 20.0,
+          "volume": 0.062,
+          "energy": 2.7703895674183103,
+          "work_time": 1898.042764989123,
+          "return_soc": 30.740260814542243
+        },
+        {
+          "service": "S009",
+          "model": "B",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1024310782372955,
+          "work_time": 1560.7797905471107,
+          "return_soc": 47.43922304406761
+        },
+        {
+          "service": "S010",
+          "model": "B",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.82100440600736,
+          "work_time": 1554.57223916144,
+          "return_soc": 54.474889849816
+        },
+        {
+          "service": "S011",
+          "model": "B",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.0771461381899656,
+          "work_time": 1189.6308045644814,
+          "return_soc": 73.07134654525086
+        },
+        {
+          "service": "S012",
+          "model": "B",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.7632799914213146,
+          "work_time": 1944.0258065766109,
+          "return_soc": 30.918000214467135
+        },
+        {
+          "service": "S013",
+          "model": "B",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.8207629916170749,
+          "work_time": 1500.9702855348598,
+          "return_soc": 54.48092520957313
+        },
+        {
+          "service": "S014",
+          "model": "B",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.1276131486007412,
+          "work_time": 1844.5398866711257,
+          "return_soc": 46.80967128498147
+        },
+        {
+          "service": "S015",
+          "model": "B",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 2.310845731625163,
+          "work_time": 1829.5741010160164,
+          "return_soc": 42.22885670937092
+        }
+      ]
+    },
+    "C": {
+      "summary": {
+        "sorties": 18,
+        "energy_kwh": 74.04653810746971,
+        "work_time_s": 33829.39269966545,
+        "delivered_boxes": 80
+      },
+      "trips": [
+        {
+          "service": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-MED-01",
+            "S001-MED-02",
+            "S001-WAT-06",
+            "S001-WAT-07",
+            "S001-WAT-08",
+            "S001-FOD-02",
+            "S001-FOD-03",
+            "S001-HYG-01",
+            "S001-HYG-02"
+          ],
+          "mass": 76.0,
+          "volume": 0.231,
+          "energy": 2.926237390911867,
+          "work_time": 1693.4267416985451,
+          "return_soc": 63.422032613601665
+        },
+        {
+          "service": "S001",
+          "model": "C",
+          "boxes": [
+            "S001-WAT-01",
+            "S001-WAT-02",
+            "S001-WAT-03",
+            "S001-WAT-04",
+            "S001-WAT-05",
+            "S001-FOD-01"
+          ],
+          "mass": 78.0,
+          "volume": 0.163,
+          "energy": 3.004662059347571,
+          "work_time": 1495.4267416985451,
+          "return_soc": 62.44172425815536
+        },
+        {
+          "service": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-MED-01",
+            "S002-WAT-04",
+            "S002-FOD-01",
+            "S002-FOD-02",
+            "S002-HYG-01"
+          ],
+          "mass": 39.0,
+          "volume": 0.13,
+          "energy": 5.1888263425377374,
+          "work_time": 2049.0830106157746,
+          "return_soc": 35.13967071827828
+        },
+        {
+          "service": "S002",
+          "model": "C",
+          "boxes": [
+            "S002-WAT-01",
+            "S002-WAT-02",
+            "S002-WAT-03"
+          ],
+          "mass": 42.0,
+          "volume": 0.081,
+          "energy": 5.2668222938917895,
+          "work_time": 1917.0830106157748,
+          "return_soc": 34.164721326352634
+        },
+        {
+          "service": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-MED-01",
+            "S003-WAT-04",
+            "S003-FOD-01",
+            "S003-FOD-02",
+            "S003-HYG-01"
+          ],
+          "mass": 39.0,
+          "volume": 0.13,
+          "energy": 5.207640725459429,
+          "work_time": 2369.8108581124334,
+          "return_soc": 34.90449093175714
+        },
+        {
+          "service": "S003",
+          "model": "C",
+          "boxes": [
+            "S003-WAT-01",
+            "S003-WAT-02",
+            "S003-WAT-03"
+          ],
+          "mass": 42.0,
+          "volume": 0.081,
+          "energy": 5.286702317713482,
+          "work_time": 2237.8108581124334,
+          "return_soc": 33.916221028581475
+        },
+        {
+          "service": "S004",
+          "model": "C",
+          "boxes": [
+            "S004-MED-01",
+            "S004-WAT-01",
+            "S004-WAT-02",
+            "S004-WAT-03",
+            "S004-FOD-01",
+            "S004-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 6.176858606791639,
+          "work_time": 2305.185491467822,
+          "return_soc": 22.789267415104508
+        },
+        {
+          "service": "S005",
+          "model": "C",
+          "boxes": [
+            "S005-MED-01",
+            "S005-WAT-01",
+            "S005-WAT-02",
+            "S005-WAT-03",
+            "S005-FOD-01",
+            "S005-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 4.238735064547576,
+          "work_time": 1880.0456170960802,
+          "return_soc": 47.0158116931553
+        },
+        {
+          "service": "S006",
+          "model": "C",
+          "boxes": [
+            "S006-MED-01",
+            "S006-WAT-01",
+            "S006-WAT-02",
+            "S006-WAT-03",
+            "S006-FOD-01",
+            "S006-HYG-01"
+          ],
+          "mass": 59.0,
+          "volume": 0.156,
+          "energy": 2.595678150752536,
+          "work_time": 1565.0356687212284,
+          "return_soc": 67.5540231155933
+        },
+        {
+          "service": "S007",
+          "model": "C",
+          "boxes": [
+            "S007-MED-01",
+            "S007-WAT-01",
+            "S007-WAT-02",
+            "S007-FOD-01",
+            "S007-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 3.403284441394875,
+          "work_time": 1889.2252411346622,
+          "return_soc": 57.45894448256406
+        },
+        {
+          "service": "S008",
+          "model": "C",
+          "boxes": [
+            "S008-MED-01",
+            "S008-WAT-01",
+            "S008-WAT-02",
+            "S008-FOD-01",
+            "S008-HYG-01"
+          ],
+          "mass": 45.0,
+          "volume": 0.129,
+          "energy": 5.853710552573132,
+          "work_time": 2194.129054458524,
+          "return_soc": 26.828618092835853
+        },
+        {
+          "service": "S009",
+          "model": "C",
+          "boxes": [
+            "S009-MED-01",
+            "S009-WAT-01",
+            "S009-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 3.780634483151261,
+          "work_time": 1646.9060946649493,
+          "return_soc": 52.742068960609245
+        },
+        {
+          "service": "S010",
+          "model": "C",
+          "boxes": [
+            "S010-MED-01",
+            "S010-WAT-01",
+            "S010-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 3.226030331596032,
+          "work_time": 1667.9010843762837,
+          "return_soc": 59.6746208550496
+        },
+        {
+          "service": "S011",
+          "model": "C",
+          "boxes": [
+            "S011-MED-01",
+            "S011-WAT-01",
+            "S011-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 1.9058534804635716,
+          "work_time": 1279.4513896881792,
+          "return_soc": 76.17683149420536
+        },
+        {
+          "service": "S012",
+          "model": "C",
+          "boxes": [
+            "S012-MED-01",
+            "S012-WAT-01",
+            "S012-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 4.935708893410405,
+          "work_time": 2066.472594092887,
+          "return_soc": 38.303638832369934
+        },
+        {
+          "service": "S013",
+          "model": "C",
+          "boxes": [
+            "S013-MED-01",
+            "S013-WAT-01",
+            "S013-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 3.2447510909342263,
+          "work_time": 1599.987562553089,
+          "return_soc": 59.44061136332217
+        },
+        {
+          "service": "S014",
+          "model": "C",
+          "boxes": [
+            "S014-MED-01",
+            "S014-WAT-01",
+            "S014-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 3.722845879594945,
+          "work_time": 2004.6044944185214,
+          "return_soc": 53.46442650506319
+        },
+        {
+          "service": "S015",
+          "model": "C",
+          "boxes": [
+            "S015-MED-01",
+            "S015-WAT-01",
+            "S015-FOD-01"
+          ],
+          "mass": 25.0,
+          "volume": 0.067,
+          "energy": 4.081556002397637,
+          "work_time": 1967.8071861397143,
+          "return_soc": 48.98054997002954
+        }
+      ]
+    }
+  },
+  "sensitivity": [
+    {
+      "reserve_fraction": 0.1,
+      "sorties": 18,
+      "energy_kwh": 59.2288693519579,
+      "work_time_s": 32768.914468871175,
+      "affected_max_loads": 5,
+      "limits": [
+        {
+          "service": "S001",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S001",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S002",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S002",
+          "model": "C",
+          "max_safe_payload_kg": 78.34995938080401
+        },
+        {
+          "service": "S003",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S003",
+          "model": "C",
+          "max_safe_payload_kg": 78.25264297726125
+        },
+        {
+          "service": "S004",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S004",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S004",
+          "model": "C",
+          "max_safe_payload_kg": 74.56931370721662
+        },
+        {
+          "service": "S005",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S005",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S005",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S006",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S006",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S006",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S007",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S007",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S007",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S008",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S008",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S008",
+          "model": "C",
+          "max_safe_payload_kg": 71.16208820591335
+        },
+        {
+          "service": "S009",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S009",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S009",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S010",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S010",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S010",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S011",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S011",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S011",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S012",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S012",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S012",
+          "model": "C",
+          "max_safe_payload_kg": 77.901481111177
+        },
+        {
+          "service": "S013",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S013",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S013",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S014",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S014",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S014",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S015",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S015",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S015",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        }
+      ]
+    },
+    {
+      "reserve_fraction": 0.2,
+      "sorties": 18,
+      "energy_kwh": 59.2288693519579,
+      "work_time_s": 32768.914468871175,
+      "affected_max_loads": 6,
+      "limits": [
+        {
+          "service": "S001",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S001",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S002",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S002",
+          "model": "C",
+          "max_safe_payload_kg": 68.52718567690209
+        },
+        {
+          "service": "S003",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S003",
+          "model": "C",
+          "max_safe_payload_kg": 68.23549018466116
+        },
+        {
+          "service": "S004",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S004",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S004",
+          "model": "C",
+          "max_safe_payload_kg": 63.259311007328236
+        },
+        {
+          "service": "S005",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S005",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S005",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S006",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S006",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S006",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S007",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S007",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S007",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S008",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S008",
+          "model": "B",
+          "max_safe_payload_kg": 28.679453077528315
+        },
+        {
+          "service": "S008",
+          "model": "C",
+          "max_safe_payload_kg": 58.51636885839215
+        },
+        {
+          "service": "S009",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S009",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S009",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S010",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S010",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S010",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S011",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S011",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S011",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S012",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S012",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S012",
+          "model": "C",
+          "max_safe_payload_kg": 67.84626270976703
+        },
+        {
+          "service": "S013",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S013",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S013",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S014",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S014",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S014",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S015",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S015",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S015",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        }
+      ]
+    },
+    {
+      "reserve_fraction": 0.3,
+      "sorties": 20,
+      "energy_kwh": 67.34377509691585,
+      "work_time_s": 36580.17040884049,
+      "affected_max_loads": 15,
+      "limits": [
+        {
+          "service": "S001",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S001",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S001",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S002",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S002",
+          "model": "B",
+          "max_safe_payload_kg": 26.555045342590734
+        },
+        {
+          "service": "S002",
+          "model": "C",
+          "max_safe_payload_kg": 52.43709587494119
+        },
+        {
+          "service": "S003",
+          "model": "A",
+          "max_safe_payload_kg": 24.773021077718422
+        },
+        {
+          "service": "S003",
+          "model": "B",
+          "max_safe_payload_kg": 25.443715148403843
+        },
+        {
+          "service": "S003",
+          "model": "C",
+          "max_safe_payload_kg": 51.84028724495597
+        },
+        {
+          "service": "S004",
+          "model": "A",
+          "max_safe_payload_kg": 19.603213036268563
+        },
+        {
+          "service": "S004",
+          "model": "B",
+          "max_safe_payload_kg": 23.193417611354125
+        },
+        {
+          "service": "S004",
+          "model": "C",
+          "max_safe_payload_kg": 44.03754580522452
+        },
+        {
+          "service": "S005",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S005",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S005",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S006",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S006",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S006",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S007",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S007",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S007",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S008",
+          "model": "A",
+          "max_safe_payload_kg": 13.70893278520667
+        },
+        {
+          "service": "S008",
+          "model": "B",
+          "max_safe_payload_kg": 20.81343336164532
+        },
+        {
+          "service": "S008",
+          "model": "C",
+          "max_safe_payload_kg": 36.14295232275405
+        },
+        {
+          "service": "S009",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S009",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S009",
+          "model": "C",
+          "max_safe_payload_kg": 78.94372776252939
+        },
+        {
+          "service": "S010",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S010",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S010",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S011",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S011",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S011",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S012",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S012",
+          "model": "B",
+          "max_safe_payload_kg": 25.764318992450235
+        },
+        {
+          "service": "S012",
+          "model": "C",
+          "max_safe_payload_kg": 51.32418945474939
+        },
+        {
+          "service": "S013",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S013",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S013",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S014",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S014",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S014",
+          "model": "C",
+          "max_safe_payload_kg": 80.0
+        },
+        {
+          "service": "S015",
+          "model": "A",
+          "max_safe_payload_kg": 25.0
+        },
+        {
+          "service": "S015",
+          "model": "B",
+          "max_safe_payload_kg": 30.0
+        },
+        {
+          "service": "S015",
+          "model": "C",
+          "max_safe_payload_kg": 72.87609950827313
+        }
+      ]
+    }
+  ]
+}
